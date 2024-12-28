@@ -330,10 +330,10 @@
                         },
                         {
                             "key": "field_674fccd8e67c7",
-                            "label": "Reservation cta",
-                            "name": "reservation_cta",
+                            "label": "Reservations ctas",
+                            "name": "reservations_ctas",
                             "aria-label": "",
-                            "type": "link",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -342,7 +342,32 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 2,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_67706c2b8cc7d",
+                                    "label": "Cta",
+                                    "name": "cta",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_674fccd8e67c7"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -586,5 +611,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735412113
+    "modified": 1735421745
 }

@@ -366,6 +366,7 @@ body #footer-wrapper .container .social-networks li a .icon svg {
 .section-two-partial-10c867 .row img.phone {
   mix-blend-mode: color-burn;
   width: 100%;
+  max-width: 595px;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -386,7 +387,15 @@ body #footer-wrapper .container .social-networks li a .icon svg {
   position: relative;
   z-index: 1;
 }
-.section-two-partial-10c867 .row .cta {
+.section-two-partial-10c867 .row .reservations {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  justify-content: center;
+}
+.section-two-partial-10c867 .row .reservations li .cta {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -401,35 +410,40 @@ body #footer-wrapper .container .social-networks li a .icon svg {
   margin: 0 auto;
   border: 1px solid #724E26;
 }
-.section-two-partial-10c867 .row .cta svg {
+.section-two-partial-10c867 .row .reservations li .cta svg {
   width: 18px;
   height: auto;
   fill: #F6F2E1;
 }
-@media (max-width: 768px) {
-  .section-two-partial-10c867 .row .cta svg {
-    width: 16px;
+@media (max-width: 991px) {
+  .section-two-partial-10c867 .row .reservations li .cta svg {
+    width: 15px;
   }
 }
-.section-two-partial-10c867 .row .cta .text {
+.section-two-partial-10c867 .row .reservations li .cta .text {
   color: #F6F2E1;
-  font-size: 25px;
+  font-size: 18px;
   font-family: "ELEGANT TYPEWRITER";
   line-height: 0;
 }
-@media (max-width: 768px) {
-  .section-two-partial-10c867 .row .cta .text {
-    font-size: 15px;
+@media (max-width: 991px) {
+  .section-two-partial-10c867 .row .reservations li .cta .text {
+    font-size: 14px;
   }
 }
-.section-two-partial-10c867 .row .cta:hover {
+.section-two-partial-10c867 .row .reservations li .cta:hover {
   background: #F6F2E1;
 }
-.section-two-partial-10c867 .row .cta:hover svg path {
+.section-two-partial-10c867 .row .reservations li .cta:hover svg path {
   fill: #724E26;
 }
-.section-two-partial-10c867 .row .cta:hover .text {
+.section-two-partial-10c867 .row .reservations li .cta:hover .text {
   color: #724E26;
+}
+@media screen and (min-width: 769px) and (max-width: 919px) {
+  .section-two-partial-10c867 .row .reservations {
+    flex-direction: column;
+  }
 }
 .section-two-partial-10c867 .row .go-whit {
   display: flex;
@@ -478,9 +492,14 @@ body #footer-wrapper .container .social-networks li a .icon svg {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 361px) and (max-width: 768px) {
+@media screen and (min-width: 361px) and (max-width: 991px) {
   .section-two-partial-10c867 .row .go-whit li a .text {
     font-size: 15px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 919px) {
+  .section-two-partial-10c867 .row .go-whit {
+    flex-direction: column;
   }
 }
 .section-two-partial-10c867 .row iframe {
