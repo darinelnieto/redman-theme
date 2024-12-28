@@ -1,0 +1,75 @@
+.instagram-partial-8cf9f5 {
+    padding: 100px 0;
+    background: $beige;
+    @media(max-width:768px){
+        padding: 50px 0;
+    }
+    .instagram-title{
+        font-family: $title;
+        color: $black;
+        font-size: calc(1rem + 2.6vw);
+        margin-bottom: 1.5rem;
+    }
+    .instagram-feed{
+        .redman-restaurant, .redman-la-tienda{
+            .sbi{
+                padding: 0;
+                #sbi_images{
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+    .follow-us{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+        gap: 15px;
+        list-style: none;
+        li{
+            a{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                background: $marron;
+                padding: 7px 15px;
+                border-radius: 8px;
+                transition: .2s;
+                text-decoration: none;
+                position: relative;
+                z-index: 1;
+                width: fit-content;
+                margin: 0 auto;
+                border: 1px solid $marron;
+                svg{
+                    width: 18px;
+                    height: auto;
+                    color: $beige;
+                }
+                .text{
+                    color: $beige;
+                    font-size: 25px;
+                    font-family: $title;
+                    line-height: 0;
+                    @media(max-width:768px){
+                        font-size: 16px;
+                    }
+                }
+                &:hover{
+                    background: $beige;
+                    svg{
+                        color: $marron;
+                    }
+                    .text{
+                        color: $marron;
+                    }
+                }
+            }
+        }
+        @media(max-width:640px){
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,291 @@
+/*================ Colors styles ================*/
+$beige: #F6F2E1;
+$marron: #724E26;
+$black: #000000;
+/*============== Fonts ===============*/
+@font-face {
+    font-family: 'ELEGANT TYPEWRITER';
+    src: url('../fonts/ELEGANTTYPEWRITER-Light.woff2') format('woff2'),
+        url('../fonts/ELEGANTTYPEWRITER-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BR Sonoma';
+    src: url('../fonts/BRSonoma-Regular.woff2') format('woff2'),
+        url('../fonts/BRSonoma-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$title: 'ELEGANT TYPEWRITER';
+$general: 'BR Sonoma';
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+    .container{
+        max-width: 1300px;
+    }
+    /*============ Header ============*/
+    #header-wrapper{
+        position: fixed;
+        width: 90%;
+        max-width: 1300px;
+        height: auto;
+        padding: 1rem 1.5rem;
+        background: rgba(246, 242, 225, .6);
+        left: 50%;
+        top: 5%;
+        transform: translate(-50%, -5%);
+        border-radius: 10px;
+        z-index: 5;
+        .custom-logo-link{
+            img{
+                max-width: 210px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .nav-social-network{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 10px;
+            justify-content: end;
+            li{
+                a{
+                    display: block;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    background: $marron;
+                    border-radius: 50%;
+                    color: $beige;
+                    svg{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+    /*============ Footer ============*/
+    #footer-wrapper{
+        background: $marron;
+        padding: 50px 0;
+        position: relative;
+        .background{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            mix-blend-mode: luminosity;
+            left: 0;
+            top: 0;
+        }
+        .container{
+            position: relative;
+            z-index: 1;
+            .form{
+                .input-contain{
+                    .wpcf7-not-valid-tip{
+                        background: white;
+                        width: fit-content;
+                        padding: 0 15px;
+                        font-family: $general;
+                        font-size: 13px;
+                    }
+                    input{
+                        background: transparent;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid $beige;
+                        font-family: $general;
+                        padding: 7px 15px;
+                        color: $beige;
+                        font-size: 16px;
+                        max-width: 100%;
+                        &::placeholder{
+                            color: $beige;
+                            opacity: .6;
+                        }
+                    }
+                }
+                .policies{
+                    label{
+                        cursor: pointer;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        br{
+                            display: none;
+                        }
+                        .checked{
+                            display: block;
+                            width: 15px;
+                            height: 15px;
+                            border: 1px solid $beige;
+                            border-radius: 3px;
+                            position: relative;
+                            &::before{
+                                content: '';
+                                width: 13px;
+                                height: 5px;
+                                border-left: 1px solid $beige;
+                                border-bottom: 1px solid $beige;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%) rotate(-45deg);
+                                visibility: hidden;
+                                transition: .2s;
+                            }
+                        }
+                        .checked.active{
+                            &::before{
+                                visibility: visible;
+                            }
+                        }
+                        .text{
+                            color: $beige;
+                            font-size: 14px;
+                            font-family: $general;
+                            line-height: 1;
+                            a{
+                                color: $beige;
+                            }
+                        }
+                    }
+                }
+                .button-contain{
+                    margin-bottom: 1.7rem;
+                    button{
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        color: $marron;
+                        font-family: $general;
+                        font-size: 15px;
+                        padding: 7px 15px;
+                        border-radius: 8px;
+                        background: $beige;
+                        border: none;
+                        outline: none;
+                        line-height: 0;
+                        br{
+                            display: none;
+                        }
+                        svg{
+                            width: 18px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            .nav-contain{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    margin-bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li{
+                        a{
+                            color: $beige;
+                            font-family: $general;
+                            text-decoration: none;
+                            font-size: 20px;
+                        }
+                    }
+                    @media(max-width: 768px){
+                        justify-content: center;
+                        margin: 1.5rem 0;
+                    }
+                }
+            }
+            .title-social-networks{
+                font-family: $title;
+                color: $beige;
+                font-size: 30px;
+                line-height: 1;
+                margin-bottom: .9rem;
+            }
+            .social-networks{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding: 0;
+                margin-bottom: 0;
+                list-style: none;
+                li{
+                    a{
+                        text-decoration: none;
+                        display: flex;
+                        gap: 7px;
+                        color: $beige;
+                        .icon{
+                            position: relative;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background: $beige;
+                            svg{
+                                width: 20px;
+                                height: auto;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: $marron;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#ditto-page{
+   padding: 120px 0 50px 0;
+   background: $beige;
+   h1{
+        color: $black;
+        font-family: $title;
+        font-size: calc(1.2rem + 3.6vw);
+        line-height: .7;
+        margin-bottom: 2rem;
+   }
+   h2, h3, h4, h5, h6{
+        font-family: $title;
+        color: $black;
+   }
+   strong{
+        font-family: $general;
+        color: $marron;
+        font-weight: bold;
+        font-size: 20px;
+   }
+   p{
+        font-family: $general;
+        color: $marron;
+        font-size: 18px;
+   }
+   a{
+        color: $marron;
+        font-family: $general;
+        font-size: 18px;
+   }
+}

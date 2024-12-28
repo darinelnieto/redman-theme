@@ -1,0 +1,57 @@
+#thank-you-template-65055a {
+    padding: 150px 0;
+    background: $beige;
+    h1{
+        color: $black;
+        font-family: $title;
+        font-size: calc(1.2rem + 3.6vw);
+        line-height: .7;
+        margin-bottom: 2rem;
+    }
+    .description{
+        color: $marron;
+        font-family: $general;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    .back{
+        display: flex;
+            gap: 10px;
+            align-items: center;
+            background: $marron;
+            padding: 7px 15px;
+            border-radius: 8px;
+            transition: .2s;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            width: fit-content;
+            margin: 0 auto;
+            border: 1px solid $marron;
+            svg{
+                width: 18px;
+                height: auto;
+                path{
+                    fill: $beige;
+                }
+            }
+            .text{
+                color: $beige;
+                font-size: 25px;
+                font-family: $title;
+                line-height: 0;
+            }
+            &:hover{
+                background: $beige;
+                svg{
+                    path{
+                        fill: $marron;
+                    }
+                }
+                .text{
+                    color: $marron;
+                }
+            }
+    }
+}

@@ -1,0 +1,117 @@
+.banner-partial-e3f173 {
+    position: relative;
+    height: 95vh;
+    overflow: hidden;
+    background:$beige;
+    @media(min-width:1500px){
+        max-height: 70vh;
+    }
+    .owl-carousel{
+        .item{
+            img{
+                width: 100%;
+                height: 95vh;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    .container{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        h1{
+            color: $beige;
+            font-family: $title;
+            font-size: calc(1.2rem + 3.6vw);
+            line-height: .7;
+        }
+        h3{
+            color: $beige;
+            font-family: $title;
+            font-size: calc(0.6rem + 2vw);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: $beige;
+            font-family: $general;
+            font-size: 18px;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        ul{
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                a{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    background: $beige;
+                    padding: 7px 15px;
+                    border-radius: 8px;
+                    transition: .2s;
+                    text-decoration: none;
+                    svg{
+                        width: 18px;
+                        height: auto;
+                    }
+                    .text{
+                        color: $marron;
+                        font-size: 25px;
+                        font-family: $title;
+                        line-height: 0;
+                        @media(max-width:768px){
+                            font-size: 15px;
+                        }
+                    }
+                    &:hover{
+                        background: $marron;
+                        svg{
+                            path{
+                                fill: $beige;
+                            }
+                        }
+                        .text{
+                            color: $beige;
+                        }
+                    }
+                }
+            }
+            @media(max-width:500px){
+                gap: 18px;
+                li{
+                    a{
+                        .text{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        @media(max-width:768px){
+            top: 0;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            h1{
+                font-size: calc(2.4rem + 3.6vw);
+            }
+            h3{
+                font-size: calc(1.1rem + 2.4vw);
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
